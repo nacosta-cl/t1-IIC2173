@@ -20,17 +20,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@ji!3x6rd*154!13-(2yk9u=z(tj4-108c*$7*m1cw2xzr049s'
+SECRET_KEY = 'jaj&r)pxk8npk7go#_&qs3^&dc0j=s)6ccl1(yyg5g3@8+)-v1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ec2-18-228-24-51.sa-east-1.compute.amazonaws.com"]
+ALLOWED_HOSTS = ['ec2-18-228-24-51.sa-east-1.compute.amazonaws.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'openComment.apps.OpencommentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
