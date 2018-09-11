@@ -1,0 +1,12 @@
+<ul>
+{% for comment in comments %}
+    <li>{comment.author} dice : {comment.text}</li>
+{% endfor %}
+</ul>
+<div>
+<form method="get" action='/'>
+Nombre <input type='text'>
+<br>
+comentario <input type='text'>
+<input type='submit'>
+</form>

@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>openComment</title>
+    <style>
+        body{
+          font-family: "verdana";
+          align-items: center;
+          align-content: center;
+        }
+        #form{
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .field{
+          width: 100%;
+          align-self: center;
+          text-align: left;
+          border: 1px solid #000000;
+          margin: 1px;
+          padding: 3px;
+        }
+        #comments{
+          width: 200px;
+          height: 200px;
+        }
+        #send{
+            width: 100px;
+            height: 50px;
+        }
+        h2{
+          text-align: center;
+        }
+	        .miniContainer{
+          border: 2px solid gray;
+          width: 100%;
+          overflow: auto;
+          display: flex;
+        }
+        .author{
+          border: 1px solid gray;
+            width: 30%;
+            float: left;
+        }
+        .says{
+          border: 1px solid gray;
+          width: 70%;
+          float: right;
+        }
+        #textContainer{
+          width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+  <h2>openComment</h2>
+    <div id="textContainer">
+    {% for comm in comments %}
+    <div class = "miniContainer">
+      <div class="author">{{comm.author}} escribió @ {{comm.time}}</div>
+      <div class="says"><pre>{{comm.comment}}</pre></div>
+    </div>
+    {% endfor %}
+    </div>
+    <h3>Comenta!</h3>
+  <div id="form">
+  <form method="POST" action='/'>
+    <div class="field"><label>Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input name='author' type='text'></div>
+    <div class="field"><label>Comentario</label> <input id="comments" name='comment' type='text'></div>
+    <div><input id="send" type='submit'></div>
+
+  </form>
+</div>
+<script>
+</script>
+</body>
+</html>
+
